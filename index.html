@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple DOM Access and Navigation</title>
+</head>
+<body>
+  <div id="container">
+    <h1 id="mainTitle">Welcome!</h1>
+    <p class="info">This is a paragraph.</p>
+    <p class="info">This is another paragraph.</p>
+    <div>Some content inside a div.</div>
+  </div>
+  <script>
+    const h1 = document.getElementById('mainTitle');
+const pElements = document.getElementsByClassName('info');
+const firstDiv = document.querySelector('div');
+const parentNode = h1.parentNode;
+const childNodes = parentNode.childNodes;
+const firstChild = parentNode.firstChild;
+const lastChild = parentNode.lastChild;
+const nextSibling = h1.nextSibling;
+const previousSibling = h1.previousSibling;
+
+
+console.log('h1: ',h1);
+console.log('pElements:',pElements);
+console.log('firstDiv: ',firstDiv);
+console.log('parentNode:',parentNode)
+console.log('childNodes:',childNodes);
+console.log('firstChild:',firstChild);
+console.log('lastChild:',lastChild);
+console.log('nextSibling:',nextSibling);
+console.log('previousSibling:',previousSibling);
+  </script>
+</body>
