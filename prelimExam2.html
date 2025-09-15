@@ -1,0 +1,21 @@
+<script>
+//Part 5
+ let age2 = parseInt(prompt("Enter your age:"));
+let isMember = prompt("Are you a member? (yes/no)").toLowerCase();
+let ticketPrice = 0;
+
+if (age2 < 12) {
+    ticketPrice = 5;
+} else if (age2 >= 12 && age2 <= 17) {
+    ticketPrice = 8;
+} else if (age2 >= 18 && age2 <= 59) {
+    ticketPrice = 12;
+    if (isMember === "yes") {
+        ticketPrice = ticketPrice * 0.8; // 20% discount
+    }
+} else {
+    ticketPrice = 6; // Senior
+}
+
+console.log("Your final ticket price is:", `$${ticketPrice}`);
+</script>

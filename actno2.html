@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ASK FOR YOUR SCORE</title>
+</head>
+<body>
+  
+<script>
+    const score = prompt("Enter your score:");
+    const scholarship = prompt("Do you have a scholarship?:");
+
+    if(score >= 90){
+        console.log("You belong to A");
+        if(scholarship.toLocaleLowerCase() === "yes"){
+            console.log("You keep your scholarship");
+    } 
+        }else if(score >= 80  && score <= 89){
+            console.log("You belong to B");
+        }else if(score >= 70 && score <=79){
+            console.log("You belong to C");
+        }else {
+            console.log("You belong to F")
+        }
+        
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<script>
+//Declaring functions
+    function welcomeMessage() {
+	    console.log("Welcome to the shopping cart!");
+    }
+   
+   function addFruit(){
+     let apple = 3;
+     let banana = 5;
+     let sum = apple + banana;
+        console.log("Total fruits: " + sum);  
+   }
+    welcomeMessage();
+    addFruit();
+
+    //function parameters and arguments
+  function addItem(item = "Unknown Item", quantity) {
+    console.log(`Added ${quantity} ${item}(s) to the cart.`);
+}
+addItem("Orange", 4);
+addItem("Mango", 2);
+addItem(undefined, 7); 
+addItem();
+
+//Returning values
+  function calculateTotal(price, discount = 0.20) {
+    let total = price + (price * discount);
+    return total;
+  }
+    function freeShipping(total) {
+        if (total > 50) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+  
+    console.log("freeShipping: " + freeShipping(60));
+    console.log("freeShipping: " + freeShipping(30));
+
+//function invocation
+function multiplyPrice(price, qty) {
+  return price * qty;
+}
+
+function checkout(price, qty) {
+  let subtotal = multiplyPrice(price, qty);
+  let tax = multiplyPrice(subtotal, 0.8);
+  let total = subtotal + tax;
+  return total;
+}
+let totalPrice = calculateTotal(20, 3);
+console.log(totalPrice);
+
+//Scope practice
+ let storeName = "Fresh Mart";
+ function greet(){
+  console.log(storeName);
+ }
+  function printStore(){
+   console.log(storeName);
+  
+  let localStore = "Produce";
+  console.log(localStore);
+  }
+  printStore();
+  console.log(localStore); // This will cause an error because localStore is not defined in this scope
+  //Variables declared inside a function (like 'section') are local to that function and cannot be accessed outside of it.
+
+//Variable hoisting
+console.log(cartTotal); // Output: undefined
+var cartTotal = 100;
+console.log(cartTotal); // Output: 10
+
+  
+</script>
