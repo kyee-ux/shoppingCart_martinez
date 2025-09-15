@@ -60,17 +60,17 @@ console.log(totalPrice);
   function printStore(){
    console.log(storeName);
   
-  let localStore = "Produce";
-  console.log(localStore);
+  let section = "Produce";
+  console.log(section);
   }
   printStore();
-  console.log(localStore); // This will cause an error because localStore is not defined in this scope
+  console.log(section); // This will cause an error because localStore is not defined in this scope
   //Variables declared inside a function (like 'section') are local to that function and cannot be accessed outside of it.
 
-//Variable hoisting
-console.log(cartTotal); // Output: undefined
+//Var
+console.log(cartTotal); 
 var cartTotal = 100;
-console.log(cartTotal); // Output: 10
+console.log(cartTotal); 
 
   
 </script>
